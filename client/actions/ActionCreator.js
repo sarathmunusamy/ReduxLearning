@@ -34,3 +34,36 @@ export const addComments = (author, text, commandID) => {
     }
 
 };
+
+export const removeComments = (index, commentID) => {
+    return {
+        type: 'removeComments',
+        index,
+        commentID
+    }
+};
+
+export const addNumbers = (number) => {
+
+    return {
+        type: 'addNumber',
+        number
+    }
+};
+
+export const removeNumbers = (number) => {
+
+    return {
+        type: 'removeNumber',
+        number
+    }
+};
+
+
+export const editNumber = (number, index) => {
+    return {
+        type: 'editNumber',
+        number,
+        index
+    }
+}

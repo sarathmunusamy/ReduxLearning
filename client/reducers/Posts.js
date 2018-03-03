@@ -19,8 +19,8 @@ function posts(state = [], action) {
       ];
 
     case 'filter':
-   
-     return [...state, matchingString:action.searchString];
+      return state;
+    //  return [...state, matchingString:action.searchString];
 
     default:
       return state;

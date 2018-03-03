@@ -9,11 +9,13 @@ import rootReducer from './reducers/Index';
 // Import Default Vaules.
 import posts from './data/posts';
 import comments from './data/comments';
+import numbers from './data/numbers';
 
 
 const defaultState = {
     posts,
-    comments
+    comments,
+    numbers
 };
 
 const store = createStore(rootReducer, defaultState);

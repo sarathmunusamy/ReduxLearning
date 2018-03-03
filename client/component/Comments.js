@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Comments = React.createClass({
+
     CommentInstance(comment, index) {
 
         return (
@@ -8,6 +9,7 @@ const Comments = React.createClass({
                 <p>
                     <strong>{comment.user}</strong>
                     <text>{comment.text}</text>
+                    <button className="remove-comment" onClick={this.props.removeComments.bind(null, index, this.props.params.postid)}>&times;</button>
                 </p>
             </div>
         )
@@ -15,11 +17,11 @@ const Comments = React.createClass({
     },
     handleSubmit(e) {
         e.preventDefault();
-      
+
         const author = this.refs.author.value,
             text = this.refs.comment.value;
 
-        console.log(author, text);
+        this.props.addComments(author, text, this.props.params.postid);
 
     },
 

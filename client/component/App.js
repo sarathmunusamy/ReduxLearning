@@ -10,7 +10,8 @@ import Main from './Main';
 const mapStateToProps = (state) => {
     return {
         posts: state.posts,
-        comments: state.comments
+        comments: state.comments,
+        numbers: state.numbers
     }
 }
 

@@ -11,6 +11,7 @@ import Main from './component/Main';
 import PhotoGrid from './component/PhotoGrid';
 import Single from './component/Single';
 import App from './component/App';
+import CurdNumbers from './component/CurdNumber';
 
 // Import css
 import css from './styles/style.styl';
@@ -21,6 +22,7 @@ const router = (
             <Route path="/" component={App}>
                 <IndexRoute component={PhotoGrid}></IndexRoute>
                 <Route path="/view/:postid" component={Single} />
+                <Route path="/curd" component={CurdNumbers} />
             </Route>
         </Router>
     </Provider>

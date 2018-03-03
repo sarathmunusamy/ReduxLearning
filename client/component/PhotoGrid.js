@@ -1,5 +1,6 @@
 import React from 'react';
 import Photo from './Photo';
+import { Link } from 'react-router';
 
 const PhotoGrid = React.createClass({
 
@@ -12,10 +13,12 @@ const PhotoGrid = React.createClass({
         return (
             <div className="container">
                 {/* <form ref="commentForm" onSubmit={this.handleSubmit}> */}
-                <input className="textbox" type="text" ref="filter" onChange={this.handleSubmit} />
+                {/* <input className="textbox" type="text" ref="filter" onChange={this.handleSubmit} /> */}
                 {/* <button type="submit" hidden /> */}
                 {/* </form> */}
+                <Link to='/curd'>Numbers</Link>
                 <div className="photo-grid">
+                 
 
                     {this.props.posts.map((post, index) => {
                         return (
